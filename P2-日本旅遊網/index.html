@@ -6,13 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>日本旅遊網</title>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
@@ -44,48 +37,33 @@
       </nav>
     </header>
     <main>
-      <section>
-        <div class="background-img">
-          <div
-            id="carouselExampleSlidesOnly"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="./images/background1.jpg"
-                  class="d-block w-100"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./images/background2.jpg"
-                  class="d-block w-100"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./images/background3.jpg"
-                  class="d-block w-100"
-                  alt="..."
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- <h3>
-          新日本，新體驗<br />體驗各種特色節慶與美景，感受日本文化的獨特魅力
-        </h3> -->
+      <section class="background-img">
+        <div class="filter"></div>
+        <h3>
+          新日本，新體驗<br /><br />體驗各種特色節慶與美景，感受日本文化的獨特魅力
+        </h3>
       </section>
     </main>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-      crossorigin="anonymous"
-    ></script>
+    <script>
+      setInterval(() => {
+        let topBackground = document.querySelector("section.background-img");
+        if (
+          topBackground.style.backgroundImage ==
+          'url("../images/background1.jpg")'
+        ) {
+          topBackground.style.backgroundImage =
+            'url("../images/background2.jpg")';
+        } else if (
+          topBackground.style.backgroundImage ==
+          'url("../images/background2.jpg")'
+        ) {
+          topBackground.style.backgroundImage =
+            'url("../images/background3.jpg")';
+        } else {
+          topBackground.style.backgroundImage =
+            'url("../images/background1.jpg")';
+        }
+      }, 3000);
+    </script>
   </body>
 </html>

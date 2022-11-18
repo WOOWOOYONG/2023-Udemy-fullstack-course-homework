@@ -60,20 +60,20 @@ header{
 }
 
 main {
-    section{
-        div.background-img {
-            min-height:70vh ;
-            background-size: cover;
-            background-position: center;
-            transition: all 0.75s ease;
-            position: relative;
-            z-index: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-    
+    section.background-img {
+        min-height: 70vh;
+        background-image: url('../images/background1.jpg');
+        background-size: cover;
+        background-position: center;
+        transition: all 0.75s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 0;
+        position: relative;
+
             div.filter{
-                background-color: rgba(0,0,0,0.5);
+                background-color: rgba(0,0,0,0.6);
                 width: 100%;
                 min-height: 70vh;
                 position: absolute;
@@ -87,6 +87,5 @@ main {
                 text-align: center;
             }
         }
-    }
 
 }
