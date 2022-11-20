@@ -2,6 +2,7 @@ $themeColor:rgba(200, 57, 46, 0.921);
 $font-xl: 2rem;
 $font-l: 1.8rem;
 $font-m: 1.4rem;
+$font-s: 1.2rem;
 
 *{
     margin: 0;
@@ -50,7 +51,7 @@ header{
         margin-top: 2rem;
         flex: 1 1 600px;
 
-        ul{
+        .nav-menu {
             display: flex;
             list-style-type: none;
             justify-content: space-around;
@@ -72,6 +73,19 @@ header{
                     margin-right: 1rem;
                 }
                } 
+            }
+        }
+        div.hamburger{
+            display: none;
+            cursor: pointer;
+            .bar {
+                display: block;
+                width: 25px;
+                height: 3px;
+                margin: 5px auto;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                background-color: #000;
             }
         }
     }
@@ -192,7 +206,7 @@ main {
                     box-shadow: 3px 3px 3px rgb(217, 217, 217);
                     &:hover {
                         transform: scale(1.1);
-                        cursor: pointer;
+                        cursor:grab;
                         opacity: 0.8;
                     }
                 }
@@ -284,17 +298,65 @@ footer {
     }
 }
 
-@media  (max-width: 700px) {
+@media  (max-width: 768px) {
     header {
+        display: flex;
+        flex-wrap: nowrap;
+
+        section.logo{
+            flex: 1 0 60%;
+            img {
+                width: 4vh;
+                height: 4vh;
+                margin-left: 2rem;
+                margin-top: 1rem;
+
+            }
+            h1 {
+                font-size: $font-l;
+            }
+        }
         nav {
-            ul{
+            .nav-menu{
+                position: fixed;
+                left: -100%;
+                top: 105px;
+                gap: 0;
                 flex-direction: column;
+                background-color: rgba(255, 255, 255, 0.967);
+                width: 100%;
                 text-align: center;
+                transition: 0.3s ;
                 li {
-                    margin: 0.5rem;
+                    margin: 1rem;
+                    
+                    a {
+                        font-size: $font-s;
+                    }
                 }
             }
-        
+            .nav-menu.active {
+                left: 0;
+            }
+            div.hamburger {
+                display:block ;
+                margin-left: 5rem;
+
+            }
+            div.hamburger.active {
+                span.bar{
+                &:nth-child(2){
+                    opacity: 0;
+                };
+                &:nth-child(1){
+                    transform: translateY(8px) rotate(45deg);
+                };
+                &:nth-child(3){
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+                    
+                }
+            }
     }
  }
 }

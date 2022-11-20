@@ -25,7 +25,7 @@
         <h1>2023日本旅遊推薦</h1>
       </section>
       <nav>
-        <ul>
+        <ul class="nav-menu">
           <li>
             <a href="#"><i class="fa-solid fa-plane-departure"></i>最新消息</a>
           </li>
@@ -45,6 +45,11 @@
             >
           </li>
         </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
     </header>
     <main>
@@ -171,6 +176,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
+      // 首頁圖片輪播
       setInterval(() => {
         let topBackground = document.querySelector("section.background-img");
         if (
@@ -190,6 +196,8 @@
             'url("../images/background1.jpg")';
         }
       }, 3000);
+
+      // swiper.js
       const swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
         spaceBetween: 30,
@@ -223,6 +231,13 @@
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+      });
+      // hamburger menu
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
       });
     </script>
   </body>
