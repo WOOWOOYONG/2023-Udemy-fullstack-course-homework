@@ -128,7 +128,7 @@ main section.info-circle div.circles {
 }
 main section.info-circle div.circles div.circle {
   padding: 1rem;
-  flex: 0 1 450px;
+  flex: 0 1 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
