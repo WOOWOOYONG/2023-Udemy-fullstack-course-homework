@@ -202,6 +202,7 @@ main section.schedule div.swiper .swiper-slide img:hover {
 }
 main section.schedule div.swiper .swiper-slide h4.schedule-info {
   margin-top: 1rem;
+  font-size: 1.4rem;
 }
 main section.schedule div.swiper .swiper-slide button {
   background-color: rgb(44, 71, 160);
