@@ -8,7 +8,12 @@ html {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
 }
 
@@ -47,6 +52,7 @@ header nav .nav-menu {
   display: flex;
   list-style-type: none;
   justify-content: space-around;
+  margin-top: 0.5rem;
 }
 header nav .nav-menu li a {
   color: black;
@@ -165,7 +171,8 @@ main section.schedule div.swiper {
 main section.schedule div.swiper .swiper-wrapper {
   margin-bottom: 3rem;
 }
-main section.schedule div.swiper .swiper-button-next, main section.schedule div.swiper .swiper-button-prev {
+main section.schedule div.swiper .swiper-button-next,
+main section.schedule div.swiper .swiper-button-prev {
   color: rgb(177, 174, 174);
   top: 40%;
 }
@@ -188,7 +195,7 @@ main section.schedule div.swiper .swiper-slide img {
   box-shadow: 3px 3px 3px rgb(217, 217, 217);
 }
 main section.schedule div.swiper .swiper-slide img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: -webkit-grab;
   cursor: grab;
   opacity: 0.8;
