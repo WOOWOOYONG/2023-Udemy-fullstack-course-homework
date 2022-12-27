@@ -159,11 +159,11 @@ function draw() {
   //確認是否有吃到果實
   if (snake[0].x == myFruit.x && snake[0].y == myFruit.y) {
     myFruit.pickALocation();
+    //更新分數
     score++;
     setHighestScore(score);
     document.querySelector(".myScore").innerHTML = `遊戲分數: ${score}`;
     document.querySelector(".myScore2").innerHTML = `最高分數: ${highestScore}`;
-    //更新分數
   } else {
     snake.pop();
   }
