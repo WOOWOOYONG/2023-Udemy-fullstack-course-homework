@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/example", (req, res) => {
-  //從req.query解構出name及level
+  //從req.query解構出name,level,classes
   let { name, level, classes } = req.query;
   //傳送至回應頁面
   res.render("response", { name, level, classes });
