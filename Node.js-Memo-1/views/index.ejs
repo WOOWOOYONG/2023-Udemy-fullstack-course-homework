@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJS頁面</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>歡迎參加封測活動，請填入以下資料</h1>
+      <form action="/example" method="GET">
+        <label for="name">暱稱： </label>
+        <input type="text" name="name" id="name" />
+        <label for="level">等級: </label>
+        <input type="number" name="level" id="level" />
+        <label for="classes">職業: </label>
+        <input type="text" name="classes" id="classes" />
+        <button>交出表單</button>
+      </form>
+      <h2>已登錄參加測試玩家</h2>
+      <table>
+        <tr>
+          <th>暱稱</th>
+          <th>等級</th>
+          <th>職業</th>
+        </tr>
+        <% party.forEach((player) => {%>
+        <tr>
+          <td><%= player.name %></td>
+          <td><%= player.level %></td>
+          <td><%= player.classes %></td>
+        </tr>
+        <% }) %>
+      </table>
+    </main>
+  </body>
+</html>

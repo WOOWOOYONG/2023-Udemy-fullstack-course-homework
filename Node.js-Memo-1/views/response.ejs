@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>回應頁面</title>
+  </head>
+  <body>
+    <h1>資料已傳送至伺服器端</h1>
+    <h3>恭喜！你已成功登錄</h3>
+    <p>你的暱稱是: <%= name %></p>
+    <p>你的等級是: LV <%= level %></p>
+    <p>你的職業是: <%= classes %></p>
+    <p>你的測試序號是: <%= Date.now()+Math.random()*10 %></p>
+  </body>
+</html>
